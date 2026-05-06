@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>字节跳动 - 国际电商 AI 团队招聘 | Ada HR</title>
+    <meta
+      name="description"
+      content="字节跳动 TikTok Shop 国际电商 AI 团队 招聘，Ada HR，AIGC 与 AI 导购业务研发岗位，欢迎联系微信 M987222Z 咨询。"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3370FF",
+              primaryLight: "#E0ECFF",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Toast Container -->
+    <div
+      id="toast-container"
+      class="fixed inset-x-0 top-4 z-50 flex justify-center pointer-events-none"
+    ></div>
+
+    <div class="min-h-screen flex flex-col">
+      <!-- Hero -->
+      <header
+        class="relative overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-white"
+      >
+        <div
+          class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_0_0,rgba(255,255,255,0.4),transparent_55%),radial-gradient(circle_at_100%_0,rgba(255,255,255,0.35),transparent_55%)]"
+        ></div>
+        <div class="relative max-w-3xl mx-auto px-4 pt-10 pb-16">
+          <div class="flex items-center justify-between gap-3 mb-6">
+            <div
+              class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs md:text-sm backdrop-blur shadow-sm border border-white/20"
+            >
+              <span
+                class="material-symbols-outlined text-base md:text-lg text-primaryLight"
+              >
+                auto_awesome
+              </span>
+              <span class="font-medium tracking-wide">
+                TikTok Shop 国际电商 AI 团队 · 招聘中
+              </span>
+            </div>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl font-semibold mb-3">
+            字节跳动-国际电商 AI 业务 HR
+          </h1>
+          <p class="text-lg sm:text-xl font-medium mb-2">Ada</p>
+
+          <p class="text-sm sm:text-base text-primaryLight mb-6 max-w-xl">
+            欢迎咨询相关岗位，也期待成为你身边的 HR 朋友。
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
+              <div
+                class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 border border-white/20"
+              >
+                <span class="material-symbols-outlined text-base">chat</span>
+                <span class="opacity-90">微信：M987222Z</span>
+              </div>
+              <div
+                class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 border border-white/20"
+              >
+                <span class="material-symbols-outlined text-base">mail</span>
+                <span class="opacity-90">邮箱：zhangmeng.momo@bytedance.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-start"
+          >
+            <button
+              id="copy-wechat-btn"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-white text-primary px-5 py-2.5 text-sm font-medium shadow-md shadow-black/10 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-base"> content_copy </span>
+              <span>复制微信号</span>
+            </button>
+
+            <a
+              href="#jobs"
+              class="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/0 text-white px-5 py-2.5 text-sm font-medium hover:bg-white/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150"
+            >
+              <span class="material-symbols-outlined text-base">work</span>
+              <span>查看岗位</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <!-- Team Section -->
+        <section class="py-8 sm:py-10">
+          <div class="max-w-3xl mx-auto px-4">
+            <div
+              class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 sm:p-6 md:p-7"
+            >
+              <h2
+                class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2"
+              >
+                <span
+                  class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-primaryLight text-primary text-sm"
+                >
+                  AI
+                </span>
+                <span>我们是谁？</span>
+              </h2>
+
+              <p class="text-sm sm:text-base text-gray-700 mb-4 leading-relaxed">
+                我们是国际电商（TikTok Shop）AI 团队，负责 AIGC 与 AI 导购业务。
+              </p>
+
+              <div class="space-y-4 text-sm sm:text-base">
+                <div>
+                  <h3 class="font-medium text-gray-900 mb-2">我们的目标</h3>
+                  <ul class="space-y-1.5 text-gray-700">
+                    <li class="flex gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+                      <span
+                        >利用 AIGC 技术大幅提升电商内容（图文 / 视频 / 直播）生产质量和效率；</span
+                      >
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+                      <span
+                        >用全新的 AI 交互体验，让用户购物更高效、更有趣；</span
+                      >
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+                      <span>助力国际电商业务高速增长。</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-gray-100">
+                  <h3 class="font-medium text-gray-900 mb-3">为什么选择我们？</h3>
+                  <div class="space-y-2.5 text-gray-700 text-sm sm:text-base">
+                    <div class="flex gap-2">
+                      <span
+                        class="mt-0.5 text-primary flex-shrink-0 inline-flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined text-base">
+                          check_circle
+                        </span>
+                      </span>
+                      <p>
+                        ✅ 站在风口：亲身参与「AI× 电商」的前沿赛道，见证从 0 到 1 的技术突破与业务爆发；
+                      </p>
+                    </div>
+                    <div class="flex gap-2">
+                      <span
+                        class="mt-0.5 text-primary flex-shrink-0 inline-flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined text-base">
+                          check_circle
+                        </span>
+                      </span>
+                      <p>
+                        ✅ 技术深耕：深入 AIGC 全链路技术，从创意到落地快速迭代，成为行业亲历者；
+                      </p>
+                    </div>
+                    <div class="flex gap-2">
+                      <span
+                        class="mt-0.5 text-primary flex-shrink-0 inline-flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined text-base">
+                          check_circle
+                        </span>
+                      </span>
+                      <p>
+                        ✅ 活力团队：创业氛围浓厚，内部高效协同，敢探索、敢试错，你的想法能快速落地；
+                      </p>
+                    </div>
+                    <div class="flex gap-2">
+                      <span
+                        class="mt-0.5 text-primary flex-shrink-0 inline-flex items-center justify-center"
+                      >
+                        <span class="material-symbols-outlined text-base">
+                          check_circle
+                        </span>
+                      </span>
+                      <p>
+                        ✅ 全球化视野：直面全球海量用户与复杂场景，在国际电商的真实战场中打磨技术与产品能力。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="py-6 sm:py-8 bg-gray-50">
+          <div class="max-w-3xl mx-auto px-4">
+            <div class="flex items-baseline justify-between mb-4">
+              <h2 class="text-lg sm:text-xl font-semibold text-gray-900">
+                当前开放岗位
+              </h2>
+              <span class="text-xs text-gray-500">共 11 个岗位</span>
+            </div>
+
+            <div class="space-y-3 sm:space-y-4">
+              <!-- Job Cards -->
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      AI 业务研发工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >上海</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A158244</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7444378423159720210?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A158244"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      AI 业务研发工程师（AIGC 方向）-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >杭州</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A251952</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7290439338209986876?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A251952"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      AI 业务研发工程师（AI 导购方向）-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >杭州</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A256795</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7308646048133187878?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A256795"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      电商场景 LLM/VLM/AIGC 训练工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >北京</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A82852</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7485703370469148935?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A82852"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      电商场景 LLM/VLM/AIGC 训练工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >上海</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A62570A</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7485703959614834952?activeTab=person"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A62570A"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      电商场景 LLM/VLM/AIGC 推理工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >北京</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A160366A</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7485701813662370066?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A160366A"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      电商场景 LLM/VLM/AIGC 推理工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >上海</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A60359</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7485698428837742856?activeTab=person"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A60359"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      大模型基础设施工程师（大模型资源管理 / 数据管理处理方向）-TikTok
+                      Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >北京</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A02791</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7481600567337568530?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A02791"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      大模型基础设施工程师（大模型资源管理 / 数据管理处理方向）-TikTok
+                      Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >上海</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A115256</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7481600632555456786?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A115256"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      电商 MaaS 平台研发工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >北京</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A45510A</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7630686142840932661?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A45510A"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150"
+              >
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start">
+                  <div class="flex-1">
+                    <h3 class="text-sm sm:text-base font-medium text-gray-900">
+                      电商 MaaS 平台研发工程师-TikTok Shop
+                    </h3>
+                    <div
+                      class="mt-1 flex flex-wrap gap-2 text-xs text-gray-500 items-center"
+                    >
+                      <span
+                        class="inline-flex items-center px-2 py-0.5 rounded-full bg-primaryLight text-primary"
+                        >上海</span
+                      >
+                      <span class="inline-flex items-center gap-1">
+                        <span class="text-gray-400">职位 ID</span>
+                        <span class="font-medium text-gray-700">A192212A</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 sm:mt-0 flex flex-wrap gap-2 justify-start sm:justify-end"
+                  >
+                    <a
+                      href="https://people.bytedance.net/hire/job/7581374002696833285?activeTab=basicInfo"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary px-3 py-1.5 text-xs font-medium hover:bg-primary/10 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >open_in_new</span
+                      >
+                      <span>查看详情</span>
+                    </a>
+                    <button
+                      type="button"
+                      data-copy-id="A192212A"
+                      class="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white text-gray-700 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-base">
+                        content_copy
+                      </span>
+                      <span>复制职位 ID</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-4 border-t border-gray-100 bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-5 flex flex-col gap-2">
+          <p class="text-xs text-gray-500">
+            TikTok Shop 国际电商 AI 团队 · 招聘 HR：Ada
+          </p>
+          <p class="text-xs text-gray-500">
+            联系邮箱：
+            <a
+              href="mailto:zhangmeng.momo@bytedance.com"
+              class="text-primary hover:underline"
+              >zhangmeng.momo@bytedance.com</a
+            >
+            · 工作城市：上海
+          </p>
+          <p class="text-[11px] text-gray-400">
+            © 2026 字节跳动 · 国际电商 AI 团队招聘页面，仅用于岗位信息展示与人才沟通。
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      (function () {
+        function showToast(message) {
+          var container = document.getElementById("toast-container");
+          if (!container) return;
+
+          var toast = document.createElement("div");
+          toast.className =
+            "pointer-events-auto rounded-full bg-gray-900/90 text-white text-xs sm:text-sm px-3.5 py-2 shadow-lg flex items-center gap-2 transition-opacity duration-300";
+
+          var icon = document.createElement("span");
+          icon.className =
+            "material-symbols-outlined text-sm sm:text-base text-primaryLight";
+          icon.textContent = "check_circle";
+
+          var text = document.createElement("span");
+          text.textContent = message;
+
+          toast.appendChild(icon);
+          toast.appendChild(text);
+          container.appendChild(toast);
+
+          setTimeout(function () {
+            toast.classList.add("opacity-0");
+            setTimeout(function () {
+              if (toast.parentNode) {
+                toast.parentNode.removeChild(toast);
+              }
+            }, 300);
+          }, 2000);
+        }
+
+        function fallbackCopyText(text) {
+          var textarea = document.createElement("textarea");
+          textarea.value = text;
+          textarea.setAttribute("readonly", "");
+          textarea.style.position = "absolute";
+          textarea.style.left = "-9999px";
+          document.body.appendChild(textarea);
+          textarea.select();
+
+          try {
+            var successful = document.execCommand("copy");
+            if (successful) {
+              showToast("已复制：" + text);
+            } else {
+              showToast("复制失败，请手动复制");
+            }
+          } catch (err) {
+            showToast("复制失败，请手动复制");
+          }
+
+          document.body.removeChild(textarea);
+        }
+
+        function copyText(text) {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard
+              .writeText(text)
+              .then(function () {
+                showToast("已复制：" + text);
+              })
+              .catch(function () {
+                fallbackCopyText(text);
+              });
+          } else {
+            fallbackCopyText(text);
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var wechatBtn = document.getElementById("copy-wechat-btn");
+          if (wechatBtn) {
+            wechatBtn.addEventListener("click", function () {
+              copyText("M987222Z");
+            });
+          }
+
+          var jobButtons = document.querySelectorAll("[data-copy-id]");
+          jobButtons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var id = btn.getAttribute("data-copy-id");
+              if (id) {
+                copyText(id);
+              }
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
